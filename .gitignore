@@ -1,0 +1,23 @@
+# Resume (private)
+Paarth_Resume_2026.pdf
+./my-portfolio/node_modules/
+# Dependencies
+node_modules/
+
+# Build output
+./my-portfolio/dist/
+./my-portfolio/build/
+.vite/
+
+# Environment
+./my-portfolio/.env
+./my-portfolio/.env.local
+./my-portfolio/.env.*.local
+
+# IDE / OS
+./my-portfolio/.DS_Store
+./my-portfolio/Thumbs.db
+./my-portfolio/*.log
+
+# Logs
+
