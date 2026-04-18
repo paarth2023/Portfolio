@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { RotatingTitle } from "./components/RotatingTitle";
 import { Terminal } from "./components/Terminal";
+import { ProjectsGUI } from "./components/ProjectsGUI";
 
 function useScrollEffects(view) {
   useEffect(() => {
@@ -61,6 +62,12 @@ function App() {
     );
   }
 
+  if (view === "projects-gui") {
+    return (
+      <ProjectsGUI onExit={() => setView("home")} />
+    );
+  }
+
   return (
     <div className="home-container">
       <div className="noise-overlay" />
@@ -78,6 +85,9 @@ function App() {
               <a href="#top" className="nav-link">Home</a>
               <button onClick={() => setView("projects")} className="nav-link btn-link">
                 Projects (TUI)
+              </button>
+              <button onClick={() => setView("projects-gui")} className="nav-link btn-link">
+                Projects (GUI)
               </button>
               <a href="#about-skills" className="nav-link">About &amp; Skills</a>
               <a href="#achievements" className="nav-link">Achievements</a>
@@ -99,12 +109,12 @@ function App() {
                 Linux-based environments. Currently moving closer to the metal.
               </p>
               <div className="hero-actions">
-                <button onClick={() => setView("projects")} className="btn primary">
-                  Launch Project Terminal
+                <button onClick={() => setView("projects-gui")} className="btn primary">
+                  View Projects
                 </button>
-                <a href="#contact" className="btn ghost">
-                  Get in touch
-                </a>
+                <button onClick={() => setView("projects")} className="btn ghost">
+                  Launch Terminal
+                </button>
               </div>
               <div className="hero-meta">
                 <span>Smart India Hackathon 2024 Winner</span>
