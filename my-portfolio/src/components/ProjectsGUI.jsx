@@ -70,7 +70,7 @@ export const ProjectsGUI = ({ onExit }) => {
     return (
         <div className="projects-gui-container">
             <nav className="gui-nav">
-                <div className="gui-brand">Curated Portfolio / {allProjects.length} Projects</div>
+                <div className="gui-brand">Projects</div>
                 <button className="gui-close" onClick={onExit}>Home</button>
             </nav>
 
